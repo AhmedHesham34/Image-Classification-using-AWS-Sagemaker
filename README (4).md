@@ -31,18 +31,27 @@ Remember that your README should:
 
 ## Debugging and Profiling
 **TODO**: Give an overview of how you performed model debugging and profiling in Sagemaker
+After getting the new hyperparameters I applied the profiler and debugger rules like over fitting and over traning for example and made a new model with a new script.
 
 ### Results
 **TODO**: What are the results/insights did you get by profiling/debugging your model?
+2022-09-28 20:53:25 Uploading - Uploading generated training model
+2022-09-28 20:53:25 Completed - Training job completed
+Training seconds: 212
+Billable seconds: 212
+these are the results (it didn't take a lof og time because i didn't use all the data)
 
 **TODO** Remember to provide the profiler html/pdf file in your submission.
 
 
 ## Model Deployment
 **TODO**: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+I made another script for the deployment which loads and transformes the data images.
+
+test1 = io.BytesIO()
+Image.open("./dogImages/test/001.Affenpinscher/Affenpinscher_00036.jpg").save(test1, format="JPEG")
+response = predictor.predict(test1.getvalue())
 
 **TODO** Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
 ![2022-09-29_00h22_26](https://user-images.githubusercontent.com/85734497/192899183-572c1a1c-e599-45fc-98df-81d4aff46b86.png)
 
-## Standout Suggestions
-**TODO (Optional):** This is where you can provide information about any standout suggestions that you have attempted.
