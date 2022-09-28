@@ -13,6 +13,7 @@ The project is designed to be dataset independent so if there is a dataset that 
 
 ### Access
 Upload the data to an S3 bucket through the AWS Gateway so that SageMaker has access to the data. 
+![1](https://user-images.githubusercontent.com/85734497/192898433-d6a8574f-f427-4013-9148-b5cd42bbeb19.png)
 
 ## Hyperparameter Tuning
 What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
